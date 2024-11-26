@@ -81,8 +81,8 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
         />
             <div className="flex items-center justify-between">
                 <Heading
-                title="Settings"
-                description="Atur toko"
+                    title="Settings"
+                    description="Atur toko"
                 />
                 <Button
                     disabled={loading}
@@ -104,7 +104,10 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
                                 <FormItem>
                                     <FormLabel>Name</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Nama Toko" disabled= {loading} {...field}/>
+                                        <Input 
+                                            placeholder="Nama Toko" 
+                                            disabled= {loading} 
+                                            {...field}/>
                                     </FormControl>
                                     <FormMessage/>
                                 </FormItem>
@@ -128,5 +131,5 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
         </>
     );
 }
- 
+
 export default SettingsForm;

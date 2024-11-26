@@ -20,8 +20,8 @@ export function MainNav({
         },
         {
             href: `/${params.storeId}/banners`,
-            label: "Banner",
-            active: pathname === `/${params.storeId}/banner`,
+            label: "Banners",
+            active: pathname === `/${params.storeId}/banners`,
         },
         {
             href: `/${params.storeId}/settings`,

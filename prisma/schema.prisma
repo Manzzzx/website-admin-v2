@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Store {
-  id          String @id @default(uuid())
+  id          String   @id @default(uuid())
   name        String
   userId      String
   banners     Banner[] @relation("StoreToBanner")
@@ -23,13 +23,13 @@ model Store {
 }
 
 model Banner {
-  id          String @id @default(uuid())
+  id          String    @id @default(uuid())
   storeId     String
-  store       Store @relation("StoreToBanner", fields: [storeId], references: [id])
+  store       Store     @relation("StoreToBanner", fields: [storeId], references: [id])
   label       String
-  imageIUrl   String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  imageUrl    String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   @@index([storeId])
 }
