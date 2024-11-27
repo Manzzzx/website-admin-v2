@@ -23,7 +23,7 @@ interface SettingsFormProps {
 }
 
 const formSchema = z.object({
-    name: z.string().min(1),
+    name: z.string().min(5),
 })
 
 type SettingFormValues = z.infer<typeof formSchema>
@@ -102,7 +102,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Name</FormLabel>
+                                    <FormLabel>Nama</FormLabel>
                                     <FormControl>
                                         <Input 
                                             placeholder="Nama Toko" 
@@ -118,7 +118,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
                         disabled={loading}
                         type="submit"
                     >
-                        Save
+                        Simpan
                     </Button>
                 </form>
             </Form>

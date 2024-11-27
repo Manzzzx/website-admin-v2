@@ -26,7 +26,6 @@ export const ApiAlert: React.FC<ApiAlertProps> = ({
     description,
     variant = "public",
 }) => {
-
     const onCopy = () => {
         navigator.clipboard.writeText(description)
         toast.success("API berhasil di copy")
